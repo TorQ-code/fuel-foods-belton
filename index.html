@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<!-- Fuel Foods — hover shine only, real cobbler graphic -->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fuel Foods — Famous Tiger Hibachi · Belton & Anderson, SC</title>
+<meta name="description" content="Fuel Foods food truck and catering. Famous Tiger Hibachi and global flavors around Anderson, Belton and the Upstate. Flagship opening soon at 607 N Main St, Belton SC." />
+<meta property="og:title" content="Fuel Foods — Famous Tiger Hibachi" />
+<meta property="og:description" content="Find the truck this week, book catering, and get the text when 607 N Main opens." />
+<meta property="og:image" content="https://fuelfoods.com/building.jpg" />
+<link rel="icon" href="img1.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "Fuel Foods",
+  "servesCuisine": ["Hibachi", "Teriyaki", "Global"],
+  "telephone": "+1-864-617-6959",
+  "email": "fuelfoods.truck@gmail.com",
+  "address": {"@type": "PostalAddress","streetAddress": "607 N Main St","addressLocality": "Belton","addressRegion": "SC","postalCode": "29627","addressCountry": "US"},
+  "areaServed": ["Anderson County SC", "Greenville County SC", "Belton SC", "Clemson SC"],
+  "sameAs": ["https://www.instagram.com/fuel.foodtruck/", "https://www.facebook.com/p/Fuel-Foods-Food-Truck-61551799176424/"]
+}
+</script>
+<style>
+  :root{
+    --coal:#151210;        /* charcoal brick */
+    --coal-2:#1f1a17;      /* lit brick */
+    --asphalt:#2a2320;     /* wet lot */
+    --roof:#b3242a;        /* red metal roof */
+    --neon:#ff7a1a;        /* sign orange */
+    --flame:#ffc24d;       /* flame yellow */
+    --bulb:#ffd79a;        /* string-light amber */
+    --cream:#f6efe4;       /* text on dark */
+    --muted:#b9ada0;
+    --line:rgba(255,215,154,.14);
+    --display:'Big Shoulders Display',Impact,sans-serif;
+    --body:'Work Sans',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--coal);color:var(--cream);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:var(--flame)}
+  h1,h2,h3{font-family:var(--display);font-weight:900;line-height:.95;margin:0;letter-spacing:.01em}
+  h2{font-size:clamp(40px,6vw,64px)}
+  h3{font-size:clamp(24px,3vw,30px);font-weight:700}
+  p{margin:0 0 1em;max-width:62ch}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  section{padding:80px 0}
+  :focus-visible{outline:2px solid var(--flame);outline-offset:3px}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.04em;padding:14px 26px;border-radius:6px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .12s,background .12s}
+  .btn:active{transform:translateY(1px)}
+  .btn-neon{background:var(--neon);color:#1a0d05;border-color:var(--neon)}
+  .btn-neon:hover{background:var(--flame);border-color:var(--flame)}
+  .btn-ghost{background:transparent;color:var(--cream);border-color:rgba(246,239,228,.35)}
+  .btn-ghost:hover{border-color:var(--flame);color:var(--flame)}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:40;background:rgba(21,18,16,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream)}
+  .brand img{width:44px;height:44px;border-radius:50%}
+  .brand span{font-family:var(--display);font-weight:900;font-size:28px;letter-spacing:.06em}
+  .links{display:none;align-items:center;gap:28px;font-weight:500;font-size:15px}
+  .links a{color:var(--cream);text-decoration:none;position:relative;padding:6px 0}
+  .links a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:linear-gradient(90deg,var(--neon),var(--flame));transition:right .3s}
+  .links a:not(.btn):hover::after{right:0}
+  .links a:hover{color:var(--flame)}
+  .nav .btn{font-size:17px;padding:9px 18px}
+  @media(min-width:860px){.links{display:flex}}
+
+  /* hero — the rendering */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden;padding:0}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%}
+  .hero::after{content:"";position:absolute;inset:0;z-index:0;background:
+    linear-gradient(90deg,rgba(21,18,16,.78) 0%,rgba(21,18,16,.35) 46%,transparent 72%),
+    linear-gradient(180deg,rgba(21,18,16,.18) 0%,rgba(21,18,16,.28) 42%,rgba(21,18,16,.92) 100%)}
+  .hero-title,.hero h1{color:#fff8ee;text-shadow:-2px 0 0 #151210,2px 0 0 #151210,0 2px 0 #151210,0 8px 20px rgba(0,0,0,.95),0 22px 48px rgba(0,0,0,.85)}
+  .hero h1.neon{color:#fff8ee;text-shadow:-2px 0 0 #151210,2px 0 0 #151210,0 2px 0 #151210,0 4px 0 #151210,0 8px 22px rgba(0,0,0,.95),0 0 8px #ffe0b3,0 0 22px #ff7a1a}
+  .hero h1.neon small{color:#ffc24d;text-shadow:0 2px 0 #151210,0 8px 20px rgba(0,0,0,.95)}
+  .hero p{text-shadow:0 1px 0 #151210,0 2px 10px rgba(0,0,0,.95),0 10px 28px rgba(0,0,0,.9)}
+  .hero .btn-ghost{background:rgba(21,18,16,.7);backdrop-filter:blur(6px)}
+
+  .hero .wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:56px;width:100%}
+  .neon{font-family:var(--display);font-weight:900;font-size:clamp(52px,11vw,132px);line-height:.88;color:#fff3dc;
+    text-shadow:0 2px 0 #151210,0 0 6px #ffe0b3,0 0 18px var(--neon),0 0 42px rgba(255,122,26,.8),0 0 90px rgba(255,90,10,.5)}
+  .neon small{display:block;font-size:.42em;color:var(--flame);text-shadow:0 2px 0 #151210,0 0 8px rgba(255,194,77,.9),0 0 28px rgba(255,122,26,.6);margin-bottom:.15em;letter-spacing:.03em}
+  .hero p{font-size:19px;color:var(--cream);max-width:48ch;margin:22px 0 28px}
+  .hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+  @media(max-width:720px){
+    .hero{min-height:100svh}
+    .hero .wrap{padding-top:88px;padding-bottom:40px}
+    .neon{font-size:clamp(48px,15vw,84px)}
+  }
+  @media(prefers-reduced-motion:no-preference){
+    .neon{animation:flicker 9s infinite}
+    @keyframes flicker{0%,93%,100%{opacity:1}94%{opacity:.82}95%{opacity:1}97%{opacity:.9}98%{opacity:1}}
+  }
+
+  /* this week — day strip */
+  .week-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:28px}
+  .week-head p{margin:0;color:var(--muted)}
+  .days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+  .day{background:var(--coal-2);border:1px solid var(--line);border-radius:8px;padding:14px 12px;min-height:150px;display:flex;flex-direction:column;gap:6px}
+  .day.off{opacity:.45}
+  .day.today{border-color:var(--neon);box-shadow:0 0 0 1px var(--neon),0 0 24px rgba(255,122,26,.25)}
+  .day b{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:.06em}
+  .day .spot{font-weight:600;font-size:15px;line-height:1.3}
+  .day .where{font-size:13px;color:var(--muted)}
+  .day .hrs{font-size:14px;color:var(--flame);margin-top:auto}
+  .day .new{display:inline-block;font-size:11px;font-weight:600;color:#1a0d05;background:var(--flame);border-radius:3px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+  @media(max-width:820px){.days{grid-template-columns:repeat(2,1fr)}.day{min-height:auto}}
+  @media(max-width:340px){.days{grid-template-columns:1fr}}
+  .week-foot{margin-top:18px;color:var(--muted);font-size:15px}
+
+  /* location */
+  .loc{background:var(--asphalt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .loc-grid{display:grid;gap:36px;align-items:center}
+  @media(min-width:900px){.loc-grid{grid-template-columns:1.1fr .9fr}}
+  .loc figure{margin:0;position:relative;border-radius:10px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(255,122,26,.35)}
+  .loc figure img{width:100%;height:auto}
+  .loc figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(0deg,rgba(21,18,16,.9),transparent);font-size:13px;color:var(--muted)}
+  .addr{font-family:var(--display);font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1;margin:14px 0 4px}
+  .pill{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.02em;padding:4px 10px;border-radius:999px;background:rgba(179,36,42,.25);color:#ffb3b6;border:1px solid rgba(179,36,42,.6)}
+  .pill.live{background:rgba(70,160,90,.2);color:#9ee5ad;border-color:rgba(70,160,90,.6)}
+  .notify{margin-top:26px;display:grid;gap:12px;grid-template-columns:1fr 1fr}
+  .notify .btn,.notify .ok{grid-column:1/-1}
+  @media(max-width:520px){.notify{grid-template-columns:1fr}}
+  label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:6px}
+  .in{width:100%;background:var(--coal);border:1px solid rgba(246,239,228,.2);color:var(--cream);border-radius:6px;padding:12px 14px;font:inherit;font-size:16px}
+  .in:focus{outline:none;border-color:var(--neon);box-shadow:0 0 0 3px rgba(255,122,26,.25)}
+  .ok{color:#9ee5ad;font-size:15px;margin-top:8px}
+
+  /* menu */
+  .menu-grid{display:grid;gap:14px;margin-top:28px}
+  @media(min-width:720px){.menu-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1100px){.menu-grid{grid-template-columns:repeat(4,1fr)}}
+  .dish{background:var(--coal-2);border:1px solid var(--line);border-radius:8px;padding:0;position:relative;overflow:hidden}
+  .dish.hero-dish{border-color:rgba(255,122,26,.5)}
+  .dish img{width:100%;height:200px;object-fit:cover;display:block;transform:scale(1);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .dish .pad{padding:22px}
+  .dish h3{margin-bottom:8px}
+  .dish p{font-size:15px;color:var(--muted);margin-bottom:14px}
+  .dish .price{font-family:var(--display);font-size:22px;color:var(--flame);font-weight:700}
+  .menu-band{position:relative;margin:28px 0 18px;border-radius:10px;overflow:hidden;border:1px solid var(--line);aspect-ratio:21/7;max-height:240px;background:var(--coal-2)}
+  .menu-band img{width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;transform:scale(1.06);transition:transform 8s linear}
+  .menu-band:hover img{transform:scale(1)}
+  .menu-band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,18,16,.55) 0%,transparent 55%),linear-gradient(180deg,transparent 45%,rgba(21,18,16,.75) 100%);pointer-events:none}
+  .menu-band .band-label{position:absolute;left:18px;bottom:14px;z-index:1;font-family:var(--display);font-weight:900;font-size:clamp(22px,4vw,36px);line-height:.95;color:#fff8ee;text-shadow:0 2px 0 #151210,0 8px 20px rgba(0,0,0,.9)}
+  .specials{margin-top:22px;color:var(--muted);font-size:15px}
+
+  /* catering — conversation */
+  .cater{background:var(--asphalt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cater-grid{display:grid;gap:40px}
+  @media(min-width:960px){.cater-grid{grid-template-columns:.9fr 1.1fr;align-items:start}}
+  .cater ul{padding-left:1.1em;color:var(--muted);margin:0 0 1em}
+  .chat{background:var(--coal);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-height:520px;max-height:640px}
+  .chat-top{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px}
+  .chat-top .dot{width:9px;height:9px;border-radius:50%;background:var(--neon);box-shadow:0 0 10px var(--neon)}
+  .log{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:12px}
+  .msg{max-width:88%;padding:12px 15px;border-radius:12px;font-size:16px;line-height:1.45;white-space:pre-line}
+  .msg.bot{background:var(--coal-2);border:1px solid var(--line);border-bottom-left-radius:3px;align-self:flex-start}
+  .msg.me{background:var(--neon);color:#1a0d05;border-bottom-right-radius:3px;align-self:flex-end}
+  .msg.est{background:linear-gradient(160deg,#2b1a10,var(--coal-2));border:1px solid rgba(255,122,26,.5);align-self:stretch;max-width:100%}
+  .msg.est .big{font-family:var(--display);font-size:38px;font-weight:900;color:var(--flame);line-height:1;margin:4px 0 8px}
+  .msg.est small{color:var(--muted);display:block;font-size:13px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px 12px}
+  .chip{background:transparent;color:var(--cream);border:1px solid rgba(246,239,228,.3);border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;cursor:pointer}
+  .chip:hover{border-color:var(--flame);color:var(--flame)}
+  .chat form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line)}
+  .chat form .in{flex:1}
+  .chat form .btn{padding:10px 18px;font-size:18px}
+
+  /* story */
+  .story-grid{display:grid;gap:36px;align-items:center}
+  @media(min-width:900px){.story-grid{grid-template-columns:.8fr 1.2fr}}
+  .story img{border-radius:10px;width:100%;aspect-ratio:3/4;object-fit:cover}
+  .story p{font-size:18px}
+  .story .pull{font-family:var(--display);font-size:clamp(26px,3.4vw,36px);font-weight:700;line-height:1.05;color:var(--flame);margin:20px 0}
+
+  /* footer */
+  footer{padding:48px 0 110px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+  footer .wrap{display:grid;gap:18px}
+  @media(min-width:720px){footer .wrap{grid-template-columns:1fr 1fr 1fr}footer{padding-bottom:56px}}
+  footer b{color:var(--cream);font-family:var(--display);font-size:22px;letter-spacing:.06em;display:block;margin-bottom:6px}
+  footer a{color:var(--cream);text-decoration:none}
+  footer a:hover{color:var(--flame)}
+
+  /* mobile bar */
+  .bar{position:fixed;bottom:0;left:0;right:0;z-index:38;display:flex;gap:8px;padding:10px 12px;background:rgba(21,18,16,.96);border-top:1px solid rgba(255,122,26,.4)}
+  .bar .btn{flex:1;font-size:18px;padding:12px}
+  @media(min-width:720px){.bar{display:none}}
+
+  /* ===== motion ===== */
+  .rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .rv.is-in{opacity:1;transform:none}
+  .rv-l{transform:translateX(-40px)} .rv-r{transform:translateX(40px)}
+  .stagger>*{opacity:0;transform:translateY(24px) scale(.97);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+  .stagger.is-in>*{opacity:1;transform:none}
+  .stagger.is-in>*:nth-child(1){transition-delay:.05s}.stagger.is-in>*:nth-child(2){transition-delay:.12s}.stagger.is-in>*:nth-child(3){transition-delay:.19s}.stagger.is-in>*:nth-child(4){transition-delay:.26s}.stagger.is-in>*:nth-child(5){transition-delay:.33s}.stagger.is-in>*:nth-child(6){transition-delay:.4s}.stagger.is-in>*:nth-child(7){transition-delay:.47s}
+
+  /* nav: shrink on scroll, sweep underline, fly-out menu */
+  header{transition:background .3s,box-shadow .3s}
+  header.scrolled{background:rgba(21,18,16,.97);box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
+  header.scrolled .nav{height:56px}
+  .nav{transition:height .3s}
+  .links>a:not(.btn){position:relative;padding:6px 0}
+  .links>a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:linear-gradient(90deg,var(--neon),var(--flame));transition:right .3s cubic-bezier(.2,.7,.2,1)}
+  .links>a:not(.btn):hover::after{right:0}
+  .has-fly{position:relative;display:inline-flex;align-items:center}
+  .has-fly>a{position:relative;padding:6px 0}
+  .has-fly>a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:linear-gradient(90deg,var(--neon),var(--flame));transition:right .3s cubic-bezier(.2,.7,.2,1)}
+  .has-fly:hover>a::after{right:0}
+  .fly{position:absolute;top:calc(100% + 14px);left:50%;transform:translate(-50%,-12px) scale(.96);opacity:0;pointer-events:none;width:560px;background:var(--coal-2);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;box-shadow:0 30px 60px -20px rgba(0,0,0,.8),0 0 0 1px rgba(255,122,26,.15);transition:opacity .25s,transform .35s cubic-bezier(.2,.7,.2,1)}
+  .fly::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
+  .has-fly:hover .fly,.has-fly:focus-within .fly{opacity:1;transform:translate(-50%,0) scale(1);pointer-events:auto}
+  .fly a{display:block;text-decoration:none;color:var(--cream);padding:12px;border-radius:8px;background:var(--coal);border:1px solid transparent;transition:transform .25s,border-color .25s;transform:translateY(8px)}
+  .has-fly:hover .fly a{transform:none}
+  .has-fly:hover .fly a:nth-child(2){transition-delay:.05s}.has-fly:hover .fly a:nth-child(3){transition-delay:.1s}
+  .fly a:hover{border-color:var(--neon);transform:translateY(-3px)}
+  .fly b{font-family:var(--display);font-size:20px;letter-spacing:.04em;display:block}
+  .fly small{color:var(--muted);font-size:13px;display:block;margin:4px 0 6px;line-height:1.35}
+  .fly em{font-style:normal;color:var(--flame);font-family:var(--display);font-size:17px}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:8px;width:44px;height:44px;position:relative}
+  .burger i{position:absolute;left:10px;right:10px;height:2px;background:var(--cream);transition:transform .3s,opacity .3s,top .3s}
+  .burger i:nth-child(1){top:14px}.burger i:nth-child(2){top:21px}.burger i:nth-child(3){top:28px}
+  .burger.open i:nth-child(1){top:21px;transform:rotate(45deg)}.burger.open i:nth-child(2){opacity:0}.burger.open i:nth-child(3){top:21px;transform:rotate(-45deg)}
+  @media(max-width:859px){.burger{display:block}}
+  .drawer{position:fixed;inset:0;z-index:39;background:rgba(21,18,16,.98);display:flex;flex-direction:column;justify-content:center;padding:40px 28px;gap:6px;transform:translateX(100%);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+  .drawer.open{transform:none}
+  .drawer a{font-family:var(--display);font-weight:900;font-size:52px;line-height:1;color:var(--cream);text-decoration:none;opacity:0;transform:translateX(30px);transition:opacity .4s,transform .4s,color .2s}
+  .drawer.open a{opacity:1;transform:none}
+  .drawer.open a:nth-child(1){transition-delay:.1s}.drawer.open a:nth-child(2){transition-delay:.17s}.drawer.open a:nth-child(3){transition-delay:.24s}.drawer.open a:nth-child(4){transition-delay:.31s}.drawer.open a:nth-child(5){transition-delay:.38s}
+  .drawer a:hover{color:var(--flame)}
+  .drawer .sm{font-family:var(--body);font-weight:500;font-size:16px;color:var(--muted);margin-top:20px}
+
+  /* hero: slow push-in, parallax, string lights, neon power-on */
+  .hero img{transform:scale(1.08);transition:transform 12s linear;will-change:transform}
+  .hero.loaded img{transform:scale(1)}
+  .hero .wrap>*{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero .wrap>p{animation-delay:.9s}.hero .wrap>.cta{animation-delay:1.1s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .neon{animation:none;opacity:0}
+  .hero.loaded .neon{animation:poweron 1.6s steps(1,end) .2s forwards, flicker 9s 3s infinite}
+  @keyframes poweron{0%{opacity:0}12%{opacity:.6}18%{opacity:0}30%{opacity:.8}38%{opacity:.3}46%{opacity:1}55%{opacity:.5}65%{opacity:1}100%{opacity:1}}
+  .bulbs{position:absolute;inset:0 0 0 52%;pointer-events:none;z-index:1}
+  .bulbs span{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--bulb);box-shadow:0 0 10px 3px rgba(255,215,154,.7);animation:twinkle 2.6s ease-in-out infinite}
+  @keyframes twinkle{0%,100%{opacity:.55;transform:scale(.9)}50%{opacity:1;transform:scale(1.15)}}
+  .scroll-hint{position:absolute;right:28px;bottom:26px;z-index:2;width:26px;height:42px;border:2px solid rgba(246,239,228,.4);border-radius:14px;opacity:0;animation:rise .8s 1.6s forwards}
+  .scroll-hint::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--flame);animation:drop 1.6s ease-in-out infinite}
+  @keyframes drop{0%{transform:translateY(0);opacity:1}70%{transform:translateY(16px);opacity:0}100%{opacity:0}}
+  @media(max-width:720px){.scroll-hint,.bulbs{display:none}}
+
+  /* day cards: lift + today pulse */
+  .day{transition:transform .25s,border-color .25s,box-shadow .25s}
+  .day:not(.off):hover{transform:translateY(-4px);border-color:rgba(255,122,26,.6)}
+  .day.today{animation:pulse 3s ease-in-out infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 1px var(--neon),0 0 24px rgba(255,122,26,.25)}50%{box-shadow:0 0 0 1px var(--flame),0 0 40px rgba(255,122,26,.5)}}
+
+  /* menu: hover lift + one-shot heat sweep only (no looping mirror) */
+  .menu-grid{perspective:900px}
+  .dish{
+    cursor:pointer;
+    transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .35s;
+  }
+  .dish:hover,.dish:focus-within{
+    transform:translateY(-8px);
+    border-color:rgba(255,122,26,.85);
+    box-shadow:0 22px 40px -18px rgba(255,122,26,.45);
+  }
+  .dish img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .dish:hover img,.dish:focus-within img{transform:scale(1.05)}
+  .dish::after{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.28) 48%,rgba(255,194,77,.22) 52%,transparent 60%);
+    transform:translateX(-120%);
+    transition:transform .7s cubic-bezier(.2,.7,.2,1);
+    pointer-events:none;z-index:4;
+  }
+  .dish:hover::after,.dish:focus-within::after{transform:translateX(120%)}
+  .dish .price{transition:transform .3s,letter-spacing .3s}
+  .dish:hover .price{transform:translateX(6px);letter-spacing:.03em}
+
+  /* location: photo drifts, address counts up */
+  .loc figure{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+  .loc figure:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 40px 70px -30px rgba(255,122,26,.6)}
+  .loc figure img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .loc figure:hover img{transform:scale(1.04)}
+
+  /* chat: messages pop, typing dots */
+  .msg{animation:pop .35s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes pop{from{opacity:0;transform:translateY(10px) scale(.96)}to{opacity:1;transform:none}}
+  .typing{display:inline-flex;gap:4px;align-self:flex-start;padding:12px 15px;background:var(--coal-2);border:1px solid var(--line);border-radius:12px;border-bottom-left-radius:3px}
+  .typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:bounce 1s infinite}
+  .typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+  @keyframes bounce{0%,80%,100%{transform:translateY(0);opacity:.5}40%{transform:translateY(-5px);opacity:1}}
+  .chip{transition:transform .2s,border-color .2s,color .2s;animation:pop .3s both}
+  .chip:nth-child(2){animation-delay:.05s}.chip:nth-child(3){animation-delay:.1s}.chip:nth-child(4){animation-delay:.15s}.chip:nth-child(5){animation-delay:.2s}
+  .chip:hover{transform:translateY(-2px)}
+  .msg.est .big{animation:glow 1.4s ease-out .2s both}
+  @keyframes glow{0%{text-shadow:0 0 0 transparent}40%{text-shadow:0 0 24px var(--neon)}100%{text-shadow:0 0 0 transparent}}
+
+  /* buttons: heat fill */
+  .btn{position:relative;overflow:hidden}
+  .btn::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--flame),var(--neon));transform:translateX(-101%);transition:transform .35s cubic-bezier(.2,.7,.2,1);z-index:0}
+  .btn-neon:hover::before{transform:none}
+  .btn>*{position:relative;z-index:1} .btn{isolation:isolate}
+  .btn-neon:hover{background:var(--neon)}
+
+  /* story pull-quote underline draws in */
+  .story .pull{position:relative;display:inline-block}
+  .story .pull::after{content:"";position:absolute;left:0;bottom:-6px;height:3px;width:0;background:linear-gradient(90deg,var(--neon),transparent);transition:width 1s cubic-bezier(.2,.7,.2,1) .3s}
+  .story .is-in .pull::after{width:70%}
+
+  /* scroll progress */
+  .progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--roof),var(--neon),var(--flame));z-index:60;transition:width .1s linear}
+
+  @media(prefers-reduced-motion:reduce){
+    .rv,.stagger>*{opacity:1;transform:none;transition:none}
+    .hero .wrap>*,.neon,.hero img,.bulbs span,.day.today,.msg,.chip,.scroll-hint,.progress{animation:none!important;opacity:1;transform:none;transition:none}
+    .hero.loaded .neon{animation:none}
+    .drawer{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="img1.png" alt="" /><span>FUEL FOODS</span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#week">This week</a>
+      <a href="#belton">607 N Main</a>
+      <span class="has-fly"><a href="#menu">Menu</a>
+        <div class="fly" role="menu">
+          <a href="#menu"><b>The Tiger</b><small>Teriyaki chicken or steak, fried rice, white tiger sauce</small><em>from $13.99</em></a>
+          <a href="#menu"><b>The Greek</b><small>Rice, cucumber salad, warm pita, tzatziki</small><em>from $13.99</em></a>
+          <a href="#menu"><b>The Cubano</b><small>Black beans, pico, pita, Carolina curry</small><em>from $13.99</em></a>
+        </div>
+      </span>
+      <a href="#catering">Catering</a>
+      <a class="btn btn-neon" href="tel:8646176959"><span>Call</span></a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
+<div class="progress" id="progress"></div>
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <a href="#week">This week</a>
+  <a href="#belton">607 N Main</a>
+  <a href="#menu">Menu</a>
+  <a href="#catering">Catering</a>
+  <a href="tel:8646176959">Call us</a>
+  <span class="sm">(864) 617-6959 · fuelfoods.truck@gmail.com</span>
+</nav>
+
+<!-- HERO: the rendering, headline set like the sign -->
+<section class="hero" id="top">
+  <img src="img2.jpg" alt="Rendering of the Fuel Foods flagship at 607 N Main St, Belton — red roof, neon sign, patio with string lights at sunset" fetchpriority="high" />
+  <div class="bulbs" id="bulbs"></div>
+  <div class="scroll-hint" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1 class="neon"><small>Well Belton,</small>We did it.</h1>
+    <p>Famous Tiger Hibachi is getting a home at 607 N Main St. Until the doors open, the truck is still rolling through Belton, Anderson and the Upstate.</p>
+    <div class="cta">
+      <a class="btn btn-neon" href="#week"><span>Find the truck this week</span></a>
+      <a class="btn btn-ghost" href="#belton"><span>Get the opening text</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- THIS WEEK -->
+<section id="week">
+  <div class="wrap">
+    <div class="week-head rv">
+      <h2>Where the truck is</h2>
+      <p id="weekLabel">Week of Aug 31 – Sep 6</p>
+    </div>
+    <div class="days stagger" id="days"></div>
+    <p class="week-foot rv">Hours move with the weather and the line. Same-day changes go up on <a href="https://www.instagram.com/fuel.foodtruck/">Instagram stories</a>.</p>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="loc" id="belton">
+  <div class="wrap loc-grid">
+    <figure class="rv rv-l">
+      <img src="img3.jpg" alt="Fuel Foods flagship rendering — 607 N Main St, Belton SC" loading="lazy" />
+      <figcaption>Concept rendering. The real thing is under way.</figcaption>
+    </figure>
+    <div>
+      <div class="rv rv-r">
+      <span class="pill">Opening soon</span>
+      <div class="addr">607 N Main St<br>Belton, SC 29627</div>
+      <p style="color:var(--muted)">The old Homeplace building, ten minutes from Anderson. Walk-up window, covered patio, and the full Tiger menu every day once we open.</p>
+      <a href="https://maps.google.com/?q=607+N+Main+St+Belton+SC+29627" target="_blank" rel="noopener">Open in Google Maps</a>
+      <form class="notify" id="notifyForm" novalidate>
+        <div><label for="nName">First name</label><input class="in" id="nName" required autocomplete="given-name" /></div>
+        <div><label for="nPhone">Mobile number</label><input class="in" id="nPhone" required type="tel" autocomplete="tel" placeholder="864-555-0100" /></div>
+        <button class="btn btn-neon" type="submit"><span>Text me when it opens</span></button>
+        <p class="ok" id="notifyOk" hidden>You're on the list. One text when the kitchen goes live, that's it.</p>
+      </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="wrap">
+    <h2 class="rv">Famous Tiger Hibachi</h2>
+    <p style="color:var(--muted);margin-top:10px">Every stop, every day. Bowls, burritos, and whatever we felt like cooking that week.</p>
+    <figure class="menu-band rv">
+      <img src="img4.jpg" alt="Fuel Foods bowls on the truck — Tiger Hibachi and sides" width="1200" height="394" />
+      <figcaption class="band-label">The bowls.</figcaption>
+    </figure>
+    <div class="menu-grid">
+      <article class="dish hero-dish">
+        <img src="img5.jpg" alt="The Tiger — teriyaki hibachi bowl" width="1200" height="900" />
+        <div class="pad">
+          <h3>The Tiger</h3>
+          <p>Teriyaki chicken or steak over fried rice with sautéed carrots, onion and zucchini. White tiger sauce.</p>
+          <div class="price">Chicken $14 · Steak / shrimp $18</div>
+        </div>
+      </article>
+      <article class="dish">
+        <img src="img6.jpg" alt="The Greek bowl with pita and tzatziki" width="1200" height="900" />
+        <div class="pad">
+          <h3>The Greek</h3>
+          <p>Rice, cucumber-onion-tomato salad, warm pita, tzatziki.</p>
+          <div class="price">Chicken $13 · Steak / shrimp $17</div>
+        </div>
+      </article>
+      <article class="dish">
+        <img src="img7.jpg" alt="The Cubano bowl with black beans and pico" width="1200" height="900" />
+        <div class="pad">
+          <h3>The Cubano</h3>
+          <p>Rice, seasoned black beans, pico salad, pita, Carolina curry sauce.</p>
+          <div class="price">Chicken $13 · Steak / shrimp $17</div>
+        </div>
+      </article>
+      <article class="dish">
+        <img src="img8.jpg" alt="Peach Pie Cobbler Crunch" width="1200" height="900" />
+        <div class="pad">
+          <h3>Peach Pie Cobbler Crunch</h3>
+          <p>Warm cobbler in a cup. The truck dessert — $5 when it’s on.</p>
+          <div class="price">$5</div>
+        </div>
+      </article>
+    </div>
+    <p class="specials rv">Rotating specials you may have caught: meatball bowl, egg rolls, pecan pie cups, cookie-butter cake cups, high-protein muffins and breakfast burritos for the gym crowd.</p>
+  </div>
+</section>
+
+<!-- CATERING -->
+<section class="cater" id="catering">
+  <div class="wrap cater-grid">
+    <div class="rv rv-l">
+      <h2>Feed a crowd</h2>
+      <p style="margin-top:12px">Truck on site, drop-off trays, or a live hibachi setup. Offices, gyms, tailgates, weddings, festivals.</p>
+      <ul>
+        <li>Minimum 15 guests</li>
+        <li>Anderson, Greenville and Pickens counties; farther by request</li>
+        <li>Vegetarian and gluten-free options on every menu</li>
+      </ul>
+      <p style="color:var(--muted);font-size:15px">Tell us about your event and you'll get a ballpark in about a minute. the kitchen confirms the final number within one business day.</p>
+      <p style="font-size:15px">Rather talk? <a href="tel:8646176959">(864) 617-6959</a> or <a href="mailto:fuelfoods.truck@gmail.com">fuelfoods.truck@gmail.com</a></p>
+    </div>
+
+    <div class="chat rv rv-r" id="chat" aria-live="polite">
+      <div class="chat-top"><span class="dot"></span>Fuel catering — quote in a minute</div>
+      <div class="log" id="log"></div>
+      <div class="chips" id="chips"></div>
+      <form id="chatForm" autocomplete="off">
+        <input class="in" id="chatIn" placeholder="Type here…" aria-label="Your reply" />
+        <button class="btn btn-neon" type="submit"><span>Send</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div class="wrap story-grid">
+    <img class="rv rv-l" src="img9.jpg" alt="The Fuel Foods owners holding the banner in front of the 607 N Main building" loading="lazy" />
+    <div class="rv rv-r">
+      <h2>Coming home</h2>
+      <p style="margin-top:14px">Less than two years ago we had the truck at the Belton community rummage sale. Somebody in line said, "When are y'all opening a restaurant?" A lady behind him answered before we could: "Hopefully in Belton. We need this."</p>
+      <p>We figured Fuel was a Greenville-and-Anderson brand. Belton, the town we grew up in, kept showing up anyway.</p>
+      <p class="pull">607 N Main is going to be the place you drive to on purpose.</p>
+      <p style="color:var(--muted)">Follow the build on <a href="https://www.instagram.com/fuel.foodtruck/">Instagram</a> and <a href="https://www.facebook.com/p/Fuel-Foods-Food-Truck-61551799176424/">Facebook</a>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>FUEL FOODS</b>Food truck &amp; catering<br>Belton · Anderson · Upstate SC</div>
+    <div><b>Reach us</b><a href="tel:8646176959">(864) 617-6959</a><br><a href="mailto:fuelfoods.truck@gmail.com">fuelfoods.truck@gmail.com</a></div>
+    <div><b>Follow</b><a href="https://www.instagram.com/fuel.foodtruck/">Instagram @fuel.foodtruck</a><br><a href="https://www.facebook.com/p/Fuel-Foods-Food-Truck-61551799176424/">Facebook</a></div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-neon" href="#week"><span>Where's the truck</span></a>
+  <a class="btn btn-ghost" href="tel:8646176959"><span>Call</span></a>
+</div>
+
+<script>
+/* ============================================================
+   CONFIG — the only things that change week to week / per client
+   ============================================================ */
+const SCHEDULE = {
+  label: 'Week of Aug 31 – Sep 6',
+  days: [
+    { d:'Mon', stops:[{ spot:'Crunch Fitness', where:'Anderson, SC', hrs:'5–8pm' }] },
+    { d:'Tue' }, { d:'Wed' }, { d:'Thu' },
+    { d:'Fri', stops:[
+        { spot:'Old Bantam Chef', where:'Belton, SC', hrs:'5–8pm', isNew:true },
+        { spot:'Hot Air Affair · Balloons Over Anderson', where:'Anderson, SC', hrs:'5–8pm' } ] },
+    { d:'Sat', stops:[{ spot:'Hot Air Affair · Balloons Over Anderson', where:'Anderson, SC', hrs:'11am until sold out' }] },
+    { d:'Sun', stops:[{ spot:'Balloons Over Anderson', where:'Anderson, SC', hrs:'See stories' }] },
+  ]
+};
+// Ballpark pricing you control. Placeholder numbers — confirm with the client.
+const PRICING = {
+  perHead: { chicken:14.5, mix:16.5, steak:18.5 },
+  style:   { truck:1.0, dropoff:0.9, hibachi:1.35 },
+  minimum: { truck:350, dropoff:250, hibachi:600 },
+  perMile: 1.75, homeBase:'Belton'
+};
+// Where the finished lead goes. Leave empty to keep the demo self-contained.
+// In production: POST to Netlify function / n8n webhook → email the kitchen + SMS + Google Sheet row.
+const LEAD_ENDPOINT = '';
+const NOTIFY_ENDPOINT = '';
+
+
+/* ---------- motion ---------- */
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const hero = document.querySelector('.hero');
+requestAnimationFrame(()=>hero.classList.add('loaded'));
+
+// string-light bulbs along the patio line of the rendering (percent coords)
+const bulbPts = [[52,58],[56,57],[60,56.5],[64,56],[68,55.5],[72,55],[76,54.5],[80,54],[84,53.5],[88,53],[92,52.5]];
+document.getElementById('bulbs').innerHTML = bulbPts.map(([x,y],i)=>`<span style="left:${x}%;top:${y}%;animation-delay:${(i*.23)%2.6}s"></span>`).join('');
+
+// parallax + nav shrink + progress bar
+const header = document.querySelector('header'), heroImg = hero.querySelector('img'), prog = document.getElementById('progress');
+addEventListener('scroll', ()=>{
+  const y = scrollY;
+  header.classList.toggle('scrolled', y>40);
+  if(!reduce && innerWidth>720 && y<innerHeight) heroImg.style.transform = `scale(1) translateY(${y*0.25}px)`;
+  const max = document.documentElement.scrollHeight - innerHeight;
+  prog.style.width = (max>0 ? y/max*100 : 0) + '%';
+}, {passive:true});
+
+// scroll reveal
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target);} }), {threshold:.18, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv,.stagger').forEach(el=>io.observe(el));
+
+document.querySelectorAll('.dish').forEach(el=>{
+  const bump = ()=>{ el.classList.remove('glint'); void el.offsetWidth; el.classList.add('glint'); };
+  el.addEventListener('pointerenter', bump);
+  el.addEventListener('click', bump);
+});
+
+// mobile drawer
+const burger = document.getElementById('burger'), drawer = document.getElementById('drawer');
+function toggleDrawer(force){ const open = force ?? !drawer.classList.contains('open'); drawer.classList.toggle('open',open); burger.classList.toggle('open',open); burger.setAttribute('aria-expanded',open); document.body.style.overflow = open?'hidden':''; }
+burger.addEventListener('click',()=>toggleDrawer());
+drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggleDrawer(false)));
+addEventListener('keydown',e=>{ if(e.key==='Escape') toggleDrawer(false); });
+
+/* ---------- schedule ---------- */
+const todayIdx = (new Date().getDay() + 6) % 7; // Mon=0
+document.getElementById('weekLabel').textContent = SCHEDULE.label;
+document.getElementById('days').innerHTML = SCHEDULE.days.map((day,i)=>{
+  const off = !day.stops || !day.stops.length;
+  const cls = ['day', off?'off':'', i===todayIdx?'today':''].join(' ');
+  const body = off ? `<span class="spot">Closed</span>` :
+    day.stops.map(s=>`<div><span class="spot">${s.spot}${s.isNew?'<span class="new">NEW</span>':''}</span><br><span class="where">${s.where}</span><br><span class="hrs">${s.hrs}</span></div>`).join('<div style="height:8px"></div>');
+  return `<div class="${cls}"><b>${day.d}</b>${body}</div>`;
+}).join('');
+
+/* ---------- opening text ---------- */
+document.getElementById('notifyForm').addEventListener('submit', async e=>{
+  e.preventDefault();
+  const payload = { name:nName.value.trim(), phone:nPhone.value.trim(), at:new Date().toISOString() };
+  if(!payload.name || !payload.phone) return;
+  if(NOTIFY_ENDPOINT){ try{ await fetch(NOTIFY_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}); }catch(_){} }
+  document.getElementById('notifyOk').hidden = false;
+  e.target.reset();
+});
+
+/* ---------- catering conversation ----------
+   A guided intake that feels like a chat. Each step has a question,
+   optional quick-reply chips, and a parser. Swap the parser layer for
+   a Claude call later; the state shape stays the same. */
+const lead = {};
+const log = document.getElementById('log');
+const chips = document.getElementById('chips');
+const chatIn = document.getElementById('chatIn');
+
+const steps = [
+  { key:'type', q:"Hey — let's get you a number. What's the occasion?",
+    chips:['Office lunch','Gym / wellness event','Tailgate or party','Wedding / rehearsal','Festival or public event'],
+    parse:v=>v },
+  { key:'style', q:"How do you want us to show up?",
+    chips:['Truck on site','Drop-off trays','Live hibachi setup'],
+    parse:v=>/drop/i.test(v)?'dropoff':/hibachi|live/i.test(v)?'hibachi':'truck' },
+  { key:'people', q:"About how many people are eating?",
+    chips:['15–25','30–50','60–100','100+'],
+    parse:v=>{ const n=(v.match(/\d+/g)||[]).map(Number); if(!n.length) return null; return Math.max(15, n.length>1?Math.round((n[0]+n[1])/2):n[0]); },
+    bad:"Give me a rough headcount, even a range is fine." },
+  { key:'protein', q:"Chicken, steak, or a mix?",
+    chips:['Mostly chicken','Chicken + steak','Mostly steak'],
+    parse:v=>/steak/i.test(v)&&/chick|mix|\+/i.test(v)?'mix':/steak/i.test(v)?'steak':'chicken' },
+  { key:'where', q:"Where's the event? Town is enough.",
+    chips:['Anderson','Belton','Greenville','Clemson'],
+    parse:v=>v },
+  { key:'date', q:"What date are you looking at? A rough one works.",
+    chips:['This weekend','Next month','Not sure yet'],
+    parse:v=>v },
+  { key:'contact', q:"Last thing — a name and a phone number so we can confirm.",
+    parse:v=>v.length>5?v:null, bad:"Need a name and number to send the real quote." },
+];
+let step = 0, userTouchedChat = false;
+document.getElementById('chat').addEventListener('pointerdown',()=>userTouchedChat=true,{once:true});
+
+const milesFrom = { belton:0, anderson:10, williamston:8, pelzer:12, honea:12, easley:25, greenville:30, clemson:28, seneca:35, greer:42, simpsonville:30, powdersville:20, pendleton:18, spartanburg:60 };
+function estimate(){
+  const town = (lead.where||'').toLowerCase();
+  const miles = Object.keys(milesFrom).find(k=>town.includes(k)) ? milesFrom[Object.keys(milesFrom).find(k=>town.includes(k))] : 20;
+  const base = lead.people * PRICING.perHead[lead.protein] * PRICING.style[lead.style];
+  const total = Math.max(base, PRICING.minimum[lead.style]) + miles*PRICING.perMile;
+  return { low:Math.round(total*0.92/10)*10, high:Math.round(total*1.12/10)*10, miles };
+}
+
+function add(cls, html){ const m=document.createElement('div'); m.className='msg '+cls; m.innerHTML=html; log.appendChild(m); log.scrollTop=log.scrollHeight; }
+function typing(on){ let t=document.getElementById('typing'); if(on&&!t){ t=document.createElement('div'); t.id='typing'; t.className='typing'; t.innerHTML='<i></i><i></i><i></i>'; log.appendChild(t); log.scrollTop=log.scrollHeight; } if(!on&&t) t.remove(); }
+function ask(){
+  const s = steps[step];
+  typing(true);
+  setTimeout(()=>{ typing(false); add('bot', s.q);
+    chips.innerHTML = (s.chips||[]).map(c=>`<button type="button" class="chip">${c}</button>`).join('');
+    chips.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>answer(b.textContent)));
+    if(userTouchedChat) chatIn.focus({preventScroll:true});
+  }, 650);
+}
+async function answer(text){
+  text = text.trim(); if(!text) return;
+  add('me', text); chips.innerHTML=''; chatIn.value='';
+  const s = steps[step]; const val = s.parse(text);
+  if(val===null){ typing(true); setTimeout(()=>{typing(false);add('bot', s.bad)},500); return; }
+  lead[s.key]=val; lead[s.key+'_raw']=text; step++;
+  if(step<steps.length){ ask(); return; }
+  const est = estimate();
+  const styleName = {truck:'truck on site', dropoff:'drop-off trays', hibachi:'live hibachi'}[lead.style];
+  typing(true);
+  setTimeout(()=>{
+    typing(false);
+    add('est', `<small>Ballpark for ${lead.people} guests · ${styleName} · ${lead.where_raw}</small><div class="big">$${est.low.toLocaleString()} – $${est.high.toLocaleString()}</div><small>Includes food, service and travel from ${PRICING.homeBase}. We’ll text you the real number within one business day.</small>`);
+    add('bot', `Sent to the kitchen. If you'd rather talk now, call (864) 617-6959.`);
+    chatIn.disabled = true; chatIn.placeholder = 'Thanks — we have what we need.';
+  }, 1100);
+  const payload = { ...lead, ...est, at:new Date().toISOString() };
+  if(LEAD_ENDPOINT){ try{ await fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}); }catch(_){} }
+}
+document.getElementById('chatForm').addEventListener('submit', e=>{ e.preventDefault(); answer(chatIn.value); });
+ask();
+</script>
+</body>
+</html>
