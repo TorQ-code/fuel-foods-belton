@@ -141,13 +141,13 @@
   /* menu */
   .menu-grid{display:grid;gap:14px;margin-top:28px}
   @media(min-width:720px){.menu-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(min-width:1100px){.menu-grid{grid-template-columns:repeat(4,1fr)}}
   .dish{background:var(--coal-2);border:1px solid var(--line);border-radius:8px;padding:0;position:relative;overflow:hidden}
   .dish.hero-dish{border-color:rgba(255,122,26,.5)}
-  .dish img{width:100%;height:200px;object-fit:cover;display:block;transform:scale(1);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
-  .dish .pad{padding:22px}
-  .dish h3{margin-bottom:8px}
-  .dish p{font-size:15px;color:var(--muted);margin-bottom:14px}
+  .dish img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 42%;display:block;transform:scale(1);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .dish.dessert img{object-position:center 30%}
+  .dish .pad{padding:12px 14px 14px}
+  .dish h3{margin-bottom:4px;font-size:clamp(22px,2.4vw,28px)}
+  .dish p{font-size:13px;line-height:1.35;color:var(--muted);margin-bottom:8px}
   .dish .price{font-family:var(--display);font-size:22px;color:var(--flame);font-weight:700}
   .menu-band{position:relative;margin:28px 0 18px;border-radius:10px;overflow:hidden;border:1px solid var(--line);aspect-ratio:21/7;max-height:240px;background:var(--coal-2)}
   .menu-band img{width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;transform:scale(1.06);transition:transform 8s linear}
@@ -427,7 +427,7 @@
         <img src="img5.jpg" alt="The Tiger — teriyaki hibachi bowl" width="1200" height="900" />
         <div class="pad">
           <h3>The Tiger</h3>
-          <p>Teriyaki chicken or steak over fried rice with sautéed carrots, onion and zucchini. White tiger sauce.</p>
+          <p>Teriyaki chicken or steak, fried rice, sautéed veg, white tiger sauce.</p>
           <div class="price">Chicken $14 · Steak / shrimp $18</div>
         </div>
       </article>
@@ -435,7 +435,7 @@
         <img src="img6.jpg" alt="The Greek bowl with pita and tzatziki" width="1200" height="900" />
         <div class="pad">
           <h3>The Greek</h3>
-          <p>Rice, cucumber-onion-tomato salad, warm pita, tzatziki.</p>
+          <p>Rice, cucumber-tomato salad, pita, tzatziki.</p>
           <div class="price">Chicken $13 · Steak / shrimp $17</div>
         </div>
       </article>
@@ -443,15 +443,15 @@
         <img src="img7.jpg" alt="The Cubano bowl with black beans and pico" width="1200" height="900" />
         <div class="pad">
           <h3>The Cubano</h3>
-          <p>Rice, seasoned black beans, pico salad, pita, Carolina curry sauce.</p>
+          <p>Rice, black beans, pico, pita, Carolina curry sauce.</p>
           <div class="price">Chicken $13 · Steak / shrimp $17</div>
         </div>
       </article>
-      <article class="dish">
+      <article class="dish dessert">
         <img src="img8.jpg" alt="Peach Pie Cobbler Crunch" width="1200" height="900" />
         <div class="pad">
           <h3>Peach Pie Cobbler Crunch</h3>
-          <p>Warm cobbler in a cup. The truck dessert — $5 when it’s on.</p>
+          <p>Warm cobbler in a cup. $5 when it’s on.</p>
           <div class="price">$5</div>
         </div>
       </article>
